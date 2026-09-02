@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "layers": [
+    {
+      "name": "base",
+      "package": "helix",
+      "ecosystem": null,
+      "resolvedVersion": "1.3.0",
+      "via": null,
+      "hash": "0x705e486e88a93125"
+    },
+    {
+      "name": "self",
+      "package": null,
+      "ecosystem": null,
+      "resolvedVersion": null,
+      "via": null,
+      "hash": "0xf0af6b5ef166ef2c"
+    }
+  ],
+  "claude": {
+    "claudeMdInclude": null
+  },
+  "baseVersion": "1.3.0",
+  "baseHash": "0x705e486e88a93125",
+  "instances": [
+    {
+      "path": ".claude/skills/dna/SKILL.md",
+      "hash": "0x0f192faea6dd65ab"
+    },
+    {
+      "path": "doc/guides/dna-guide.md",
+      "hash": "0x4bc1b39610935261"
+    },
+    {
+      "path": "doc/hello_world.md",
+      "hash": "0x0903f7fc5224f6f1"
+    }
+  ]
+}
