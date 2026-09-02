@@ -15,7 +15,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0xf0af6b5ef166ef2c"
+      "hash": "0x3ef515a6d58f3d14"
     }
   ],
   "claude": {
@@ -30,7 +30,7 @@
     },
     {
       "path": "doc/guides/dna-guide.md",
-      "hash": "0x4bc1b39610935261"
+      "hash": "0x53f3df7f1bb005b3"
     },
     {
       "path": "doc/hello_world.md",

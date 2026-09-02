@@ -1,6 +1,6 @@
 {
   "name": "@ggdna/dna-helix",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "DNA layer: how a DNA layer itself is built, configured and published",
   "keywords": [
     "dna",
@@ -35,7 +35,7 @@
     "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.4.1",
     "prettier": "^3.9.6"
   }
 }

@@ -2,9 +2,9 @@
 
 The DNA layer that tells a repo how to author a DNA layer of its own.
 
-It carries only that one topic. The whole set of ggdna topic layers is
-composed by [dna_ggdna](https://github.com/ggdna/dna_ggdna), which lists
-this layer among them.
+It carries only that one topic and is one of the layers
+[dna_ggdna](https://github.com/ggdna/dna_ggdna) composes, so a repo gets
+it by taking the umbrella rather than by naming it.
 
 ## Guides
 
@@ -20,9 +20,7 @@ this layer among them.
 
 ## Layers
 
-Orthogonal, and parent-less on purpose. Every ggdna topic layer consumes
-this one, so a parent here would close a cycle back through the umbrella —
-the engine rejects a graph in which the consuming repo reappears.
+Orthogonal, and parent-less like every topic layer of this organization.
 
 ## Variables
 
@@ -31,17 +29,21 @@ the engine rejects a graph in which the consuming repo reappears.
 
 ## Usage
 
-A topic layer of this organization declares it as a dev-dependency and
-initializes once:
+Reach it through the umbrella:
 
 ```bash
-pnpm add -D @ggdna/dna-helix   # TypeScript projects
-dart pub add dev:dna_helix     # Dart projects
+pnpm add -D @ggdna/dna-ggdna   # TypeScript projects
+dart pub add dev:dna_ggdna     # Dart projects
 gg dna init
 ```
 
-Any other repo takes `dna_ggdna` instead — it brings this layer along
-with the rest of the set.
+Naming this layer directly is for a repo that wants the authoring topic
+and nothing else:
+
+```bash
+pnpm add -D @ggdna/dna-helix
+dart pub add dev:dna_helix
+```
 
 The placed test instantiates and verifies the DNA on every test run.
 
