@@ -1,11 +1,16 @@
 {
   // This package is a DNA layer: dna/ is hand-authored source and is the
   // last layer of its own instantiation.
-  "version": 1,
+  "version": 2,
 
   // No parent DNA. This layer is orthogonal: it carries only its own topic
   // and is combined with dna_ggdna and other layers by the consumer. It
   // stays parent-less on purpose — every other ggdna layer consumes it, so
   // a parent here would close a cycle back through the umbrella.
-  "layers": []
+  "layers": [],
+
+  // The copyright header names the organization, so it is never
+  // inherited: every layer listing this one sets dnaCopyrightHolder in
+  // its own dna/_vars.json.
+  "mustOverride": { "dnaCopyrightHolder": true }
 }
