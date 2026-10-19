@@ -1,7 +1,7 @@
 {
   "name": "@ggdna/dna-helix",
   "version": "0.3.0",
-  "description": "DNA layer: how a DNA layer itself is built, configured and published",
+  "description": "Gives a repo the guide and the skill to author a DNA layer of its own and publish it to pub.dev and npm.",
   "keywords": [
     "dna",
     "helix",

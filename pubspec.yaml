@@ -1,5 +1,5 @@
 name: dna_helix
-description: "DNA layer: how a DNA layer itself is built, configured and published"
+description: "Gives a repo the guide and the skill to author a DNA layer of its own and publish it to pub.dev and npm."
 version: 0.3.0
 repository: https://github.com/ggdna/dna_helix.git
 
