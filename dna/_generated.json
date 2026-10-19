@@ -5,7 +5,7 @@
       "name": "base",
       "package": "helix",
       "ecosystem": null,
-      "resolvedVersion": "1.12.0",
+      "resolvedVersion": "1.13.0",
       "via": null,
       "hash": "0x6883da335b415f9d"
     },
@@ -15,14 +15,14 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x3ef515a6d58f3d14"
+      "hash": "0x41fe994cf79ab8ef"
     }
   ],
   "claude": {
     "claudeMdInclude": null,
     "claudeMdFromDna": false
   },
-  "baseVersion": "1.12.0",
+  "baseVersion": "1.13.0",
   "baseHash": "0x6883da335b415f9d",
   "instances": [
     {
@@ -31,7 +31,7 @@
     },
     {
       "path": "doc/guides/dna-guide.md",
-      "hash": "0x53f3df7f1bb005b3"
+      "hash": "0xe993207f38f857ea"
     }
   ]
 }
