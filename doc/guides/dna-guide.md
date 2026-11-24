@@ -94,9 +94,39 @@ same way it is in prose.
   deletes
 - `X.overrides.md` replaces only the sections a markdown file marks with
   `## @tag Title`
+- Ignore files (`dot-pubignore`, `dot-gitignore`, `dot-npmignore`,
+  `dot-prettierignore`, …) are joined: list only the paths your layer
+  ships, the project receives the lines of every layer (see
+  [Ignore files](#ignore-files))
 
 Mark the sections of your guides that another organization will plausibly
 want to change — that is what makes a layer reusable instead of forkable.
+
+## Ignore files
+
+A file whose name starts with a dot and ends with `ignore` is never
+replaced by a later layer: Helix joins the lines of every layer into one
+file, one `# <layer>` section per layer in layer order, the own `dna/`
+last. A pattern an earlier section already holds is left out.
+
+```gitignore
+# dna_readme: dna/dot-pubignore
+/doc/guides/
+/scripts/
+# instance: .pubignore
+# .gitignore
+.dart_tool/
+coverage
+
+# dna_readme
+/doc/guides/
+/scripts/
+```
+
+A root `.pubignore` starts with the project's `.gitignore`: `dart pub
+publish` reads the `.pubignore` instead of the `.gitignore`, so without it
+everything git ignores would be published. Never list `/dna/` — a package
+used as a layer is read from its published `dna/` folder.
 
 ## Ship it to both registries
 
