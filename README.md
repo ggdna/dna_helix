@@ -18,6 +18,12 @@ it by taking the umbrella rather than by naming it.
   instantiate, layers that are not dependencies, variables nothing
   declares, and manifests that drifted apart
 
+## Publishing
+
+`dna/dot-pubignore` keeps `/doc/guides/` out of the package `dart pub publish`
+uploads. helix joins it with the ignore files of the other layers into the
+project's `.pubignore`.
+
 ## Layers
 
 Orthogonal, and parent-less like every topic layer of this organization.
