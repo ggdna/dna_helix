@@ -5,7 +5,7 @@
       "name": "base",
       "package": "helix",
       "ecosystem": null,
-      "resolvedVersion": "1.17.0",
+      "resolvedVersion": "1.18.0",
       "via": null,
       "hash": "0x6883da335b415f9d"
     },
@@ -15,7 +15,7 @@
       "ecosystem": null,
       "resolvedVersion": null,
       "via": null,
-      "hash": "0x7c6838328822c42b"
+      "hash": "0x56cffaefbd456c46"
     }
   ],
   "claude": {
@@ -23,22 +23,30 @@
     "claudeMdFromDna": false,
     "blockHash": null
   },
-  "baseVersion": "1.17.0",
+  "baseVersion": "1.18.0",
   "baseHash": "0x6883da335b415f9d",
   "configHash": "0xce7bbc010f57d638",
   "gitignoreHash": "0x1b0ee74d5e941279",
   "instances": [
     {
       "path": ".claude/skills/dna/SKILL.md",
-      "hash": "0xb5bd2ea2af8ac186"
+      "hash": "0x26101c3a7d46ebbd"
     },
     {
       "path": ".pubignore",
-      "hash": "0x3a54fd881a400b88"
+      "hash": "0xc6072876182e1516"
     },
     {
-      "path": "doc/guides/dna-guide.md",
-      "hash": "0x2d51fb7b92af2375"
+      "path": "doc/de/guides/dna-guide.md",
+      "hash": "0xe4d1f3f70b442a5d"
+    },
+    {
+      "path": "doc/en/guides/dna-guide.md",
+      "hash": "0xfc33c4d2e944d9eb"
+    },
+    {
+      "path": "doc/fa/guides/dna-guide.md",
+      "hash": "0xfb545b39d1973b4e"
     }
   ]
 }

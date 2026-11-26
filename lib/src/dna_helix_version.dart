@@ -9,4 +9,4 @@
 // coverage:ignore-file
 
 /// The version of the `dna_helix` package.
-const String dnaHelixVersion = '0.4.1';
+const String dnaHelixVersion = '0.5.0';
