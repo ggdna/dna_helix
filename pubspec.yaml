@@ -1,6 +1,6 @@
 name: dna_helix
 description: "DNA layer: how a DNA layer itself is built, configured and published"
-version: 0.4.1
+version: 0.5.0
 repository: https://github.com/ggdna/dna_helix.git
 
 environment:
