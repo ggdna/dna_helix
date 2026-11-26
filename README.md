@@ -8,9 +8,15 @@ it by taking the umbrella rather than by naming it.
 
 ## Guides
 
-- `dna/doc/guides/dna-guide.md` — the `dna/` layout and the `dot-`
+- `dna/doc/en/guides/dna-guide.md` — the `dna/` layout and the `dot-`
   escape, what belongs in `_dna.json` and `_vars.json`, the three
   override mechanisms, and publishing one layer to both registries
+
+Every file of `dna/doc/en/` also ships in German and Farsi, with the
+same name:
+
+- `dna/doc/de/guides/`
+- `dna/doc/fa/guides/`
 
 ## Skills
 
@@ -20,7 +26,7 @@ it by taking the umbrella rather than by naming it.
 
 ## Publishing
 
-`dna/dot-pubignore` keeps `/doc/guides/` out of the package `dart pub publish`
+`dna/dot-pubignore` keeps `/doc/*/guides/` out of the package `dart pub publish`
 uploads. helix joins it with the ignore files of the other layers into the
 project's `.pubignore`.
 

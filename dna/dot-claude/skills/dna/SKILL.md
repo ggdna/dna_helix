@@ -13,7 +13,7 @@ found in the LICENSE file in the root of this package.
 
 # DNA
 
-Read `doc/guides/dna-guide.md` and follow it.
+Read `doc/en/guides/dna-guide.md` and follow it.
 
 ## @layout 1. Check the layout
 
