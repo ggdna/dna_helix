@@ -21,7 +21,9 @@ gg dna init
 ```
 
 `gg dna init` places `dna/_dna.json` and the test that runs the engine.
-Everything else you write yourself.
+Add `"isLayer": true` to it, so the test checks the tags of your sections
+(see [Let consumers adapt it](#let-consumers-adapt-it)). Everything else
+you write yourself.
 
 A new topic layer declares no parent, for two reasons. `dna_ggdna` lists
 every topic layer, so a layer that took the umbrella back would close a
@@ -99,8 +101,14 @@ same way it is in prose.
   ships, the project receives the lines of every layer (see
   [Ignore files](#ignore-files))
 
-Mark the sections of your guides that another organization will plausibly
-want to change — that is what makes a layer reusable instead of forkable.
+Tag every section of your markdown — guides, templates, skills and
+`CLAUDE.md` alike — with `## @tag Title`; only the `#` title on top of a
+file stays untagged. Which section another organization will want to
+change is not yours to guess, and a tag is what makes a layer reusable
+instead of forkable. Keep a tag short and stable: one or two words
+naming the topic (`@setup`, `@naming`), unique within the file, the same
+in the translations of the file. Set `"isLayer": true` in
+`dna/_dna.json`, and the placed test fails on every section without one.
 
 ## Ignore files
 
