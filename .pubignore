@@ -13,4 +13,4 @@ build
 .gg/publish_state.json
 
 # dna_helix
-/doc/guides/
+/doc/*/guides/

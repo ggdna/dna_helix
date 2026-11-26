@@ -46,7 +46,7 @@ is instantiated to `x/y`:
 | In the layer | Instantiated to |
 | --- | --- |
 | `dna/LICENSE` | `LICENSE` |
-| `dna/doc/guides/x-guide.md` | `doc/guides/x-guide.md` |
+| `dna/doc/en/guides/x-guide.md` | `doc/en/guides/x-guide.md` |
 | `dna/dot-vscode/settings.json` | `.vscode/settings.json` |
 | `dna/dot-claude/skills/x/SKILL.md` | `.claude/skills/x/SKILL.md` |
 | `dna/CLAUDE.md` | the managed block of `CLAUDE.md` |
@@ -121,13 +121,13 @@ last. A pattern an earlier section already holds is left out.
 listed after it:
 
 ```gitignore
-/doc/guides/
-/doc/templates/
+/doc/*/guides/
+/doc/*/templates/
 /scripts/
 ```
 
 ```gitignore
-/doc/guides/
+/doc/*/guides/
 /scripts/
 ```
 
@@ -139,8 +139,8 @@ The project's `.pubignore`:
 coverage
 
 # dna_readme
-/doc/guides/
-/doc/templates/
+/doc/*/guides/
+/doc/*/templates/
 /scripts/
 ```
 
