@@ -15,29 +15,32 @@ found in the LICENSE file in the root of this package.
 
 Read `doc/guides/dna-guide.md` and follow it.
 
-## 1. Check the layout
+## @layout 1. Check the layout
 
 Report a path below `dna/` that starts with a literal dot instead of
 `dot-`, a private `_` file that the layer expects to be instantiated, and
 a file that would land somewhere the consumer does not expect.
 
-## 2. Check the config
+## @config 2. Check the config
 
 Report a `dna/_dna.json` whose `layers` name something that is not a
 declared dependency, and a dependency that ships a `dna/` folder but is
 missing from `layers` — a dependency that is not listed is not a layer.
 
-## 3. Check the variables
+Report a `dna/_dna.json` without `"isLayer": true` — without it, nobody
+checks that every section carries a tag.
+
+## @variables 3. Check the variables
 
 Report an identifier starting with `dna` that no `_vars.json` gives a
 value, and a value in `_vars.json` that nothing uses.
 
-## 4. Check both manifests
+## @manifests 4. Check both manifests
 
 Report a version mismatch between `pubspec.yaml` and `package.json`, and
 a layer listed in one manifest but not in the other — the engine warns
 when the two published copies differ.
 
-## 5. Report before fixing
+## @report 5. Report before fixing
 
 List the findings first. Fix only what the user confirms.

@@ -21,7 +21,9 @@ gg dna init
 ```
 
 `gg dna init` places `dna/_dna.json` and the test that runs the engine.
-Everything else you write yourself.
+Add `"isLayer": true` to it, so the test checks the tags of your sections
+(see [Let consumers adapt it](#let-consumers-adapt-it)). Everything else
+you write yourself.
 
 A new topic layer declares no parent, for two reasons. `dna_ggdna` lists
 every topic layer, so a layer that took the umbrella back would close a
@@ -99,8 +101,14 @@ same way it is in prose.
   ships, the project receives the lines of every layer (see
   [Ignore files](#ignore-files))
 
-Mark the sections of your guides that another organization will plausibly
-want to change — that is what makes a layer reusable instead of forkable.
+Tag every section of your markdown — guides, templates, skills and
+`CLAUDE.md` alike — with `## @tag Title`; only the `#` title on top of a
+file stays untagged. Which section another organization will want to
+change is not yours to guess, and a tag is what makes a layer reusable
+instead of forkable. Keep a tag short and stable: one or two words
+naming the topic (`@setup`, `@naming`), unique within the file, the same
+in the translations of the file. Set `"isLayer": true` in
+`dna/_dna.json`, and the placed test fails on every section without one.
 
 ## Ignore files
 
@@ -109,19 +117,34 @@ replaced by a later layer: Helix joins the lines of every layer into one
 file, one `# <layer>` section per layer in layer order, the own `dna/`
 last. A pattern an earlier section already holds is left out.
 
+`dna/dot-pubignore` of a layer `dna_readme` and of a layer `dna_scripts`
+listed after it:
+
 ```gitignore
-# dna_readme: dna/dot-pubignore
+/doc/guides/
+/doc/templates/
+/scripts/
+```
+
+```gitignore
 /doc/guides/
 /scripts/
-# instance: .pubignore
+```
+
+The project's `.pubignore`:
+
+```gitignore
 # .gitignore
 .dart_tool/
 coverage
 
 # dna_readme
 /doc/guides/
+/doc/templates/
 /scripts/
 ```
+
+`dna_scripts` adds nothing new, so it gets no section.
 
 A root `.pubignore` starts with the project's `.gitignore`: `dart pub
 publish` reads the `.pubignore` instead of the `.gitignore`, so without it

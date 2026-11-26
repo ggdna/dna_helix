@@ -27,6 +27,9 @@ Report a `dna/_dna.json` whose `layers` name something that is not a
 declared dependency, and a dependency that ships a `dna/` folder but is
 missing from `layers` — a dependency that is not listed is not a layer.
 
+Report a `dna/_dna.json` without `"isLayer": true` — without it, nobody
+checks that every section carries a tag.
+
 ## 3. Check the variables
 
 Report an identifier starting with `dna` that no `_vars.json` gives a
